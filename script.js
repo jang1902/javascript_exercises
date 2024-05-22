@@ -32,8 +32,29 @@ function Ex4Function(){
 }
 
 function Ex5Function(){
-    let num1=document.getElementById("input_number1_ex4").value;
-    let num2=document.getElementById("input_number2_ex4").value;
-    let num3=document.getElementById("input_number3_ex4").value;
-    document.getElementById("result_ex4").innerHTML="Max is "+Math.max(num1,num2,num3);
+
+    let num1=document.getElementById("input_number1_ex5").value;
+    let num2=document.getElementById("input_number2_ex5").value;
+    let num3=document.getElementById("input_number3_ex5").value;
+    let total =Number(num1) +Number(num2)+Number(num3);
+    let output= total >=27 ? "Excellent":total<=25?"Good":"Very Good";
+    console.log(total);
+    document.getElementById("result_ex5").innerHTML=output;
+}
+
+
+function Ex6Function(){
+
+    let a=Number(document.getElementById("input_a_ex6").value);
+    let b=Number(document.getElementById("input_b_ex6").value);
+    let c=Number(document.getElementById("input_c_ex6").value);
+    let output="";
+    if(a<=0 || b <=0 || c<=0){
+        output="is not a triangle"
+    }
+    if(a+b>c && b+c>a && a+c>b){
+        output="is a triangle"
+    }else output ="is not a triangle"
+
+    document.getElementById("result_ex6").innerHTML=output;
 }
