@@ -122,7 +122,14 @@ function Ex14Function(){
     document.getElementById("result_ex14").innerHTML="Feet: "+x;
 }
 function Ex15Function(){
-    let a=document.getElementById("input_ex15").value;
-    let x=a*3.2808399;
-    document.getElementById("result_ex15").innerHTML="Feet: "+x;
+    let a=document.getElementById("input_a_ex15").value;
+    let output="";
+    if (a.toLowerCase() === 'true' || a.toLowerCase() === 'false') {
+        output = "Boolean";
+    } else if (!isNaN(a) && a.trim() !== "") {
+        output = "Number";
+    } else {
+        output = "String";
+    }
+    document.getElementById("result_ex15").innerHTML="Data type of a is: "+output;
 }
