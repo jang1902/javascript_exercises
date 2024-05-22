@@ -131,5 +131,5 @@ function Ex15Function(){
     } else {
         output = "String";
     }
-    document.getElementById("result_ex15").innerHTML="Data type of a is: "+output;
+    document.getElementById("result_ex15").innerHTML="Data type of value is: "+output;
 }
