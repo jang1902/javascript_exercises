@@ -1,4 +1,61 @@
-function Ex1Function(){
+//Bài 1
+function ReverseArray(arr){
+    let left=0, right=arr.length-1;
+    while(left<right){
+        let temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+
+        left++;
+        right--;
+    }
+    return arr;
+}
+let arr_ex1=[1,7,3,3,4,4,8,1,0]
+//console.log(ReverseArray(arr_ex1))
+
+//Bài 2
+document.getElementById("ex1_array").innerHTML="array: "+arr_ex1;
+function Ex2Function(){
+    let value=Number(document.getElementById("input_ex2").value);
+    for (let i = 0; i < arr_ex1.length; i++) {
+        if(arr_ex1[i]==value){
+            document.getElementById("result_ex2").innerHTML="input value is at index "+i;
+        }
+    }
+}
+//Bài 3
+function Ex3Function(){
+    let value=Number(document.getElementById("input_ex3").value);
+    for (let i = 0; i < arr_ex1.length; i++) {
+        if(arr_ex1[i]==value){
+            window.alert("bingo!");
+            return;
+        }
+    }
+    window.alert("Chúc bạn may mắn lần sau");
+}
+
+//Bài 4
+function Ex4Function(){
+    let value=document.getElementById("input_ex4").value;
+    let array=value.split(" ").map(Number);
+    console.log(array);
+    console.log(value);
+
+    let max=array[0];
+    for (let i = 1; i < array.length; i++) {
+        if(array[i]>=max){
+            max=array[i];
+        }
+    }
+    document.getElementById("result_ex4").innerHTML="Max is "+max;
+}
+
+
+//Bài 5
+
+/*function Ex1Function(){
     let a=document.getElementById("input_a_ex1").value;
     let b=document.getElementById("input_b_ex1").value;
     let isDivisible=a%b;
@@ -132,4 +189,4 @@ function Ex15Function(){
         output = "String";
     }
     document.getElementById("result_ex15").innerHTML="Data type of value is: "+output;
-}
+}*/
